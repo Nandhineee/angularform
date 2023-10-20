@@ -1,0 +1,62 @@
+<div style="background-color: rosybrown;">
+<div class="container  min-vh-100" >
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-6">
+        <p class="fs-1 text-center">Form</p>
+        <div class="mt-3" style="padding-bottom: 40px">
+          <input
+            type="text"
+            class="form-control border-primary"
+            style="margin-top: 5%;"
+            id="todoInput"
+            placeholder="Enter a Name"
+            [(ngModel)]="input"
+          />
+          <input
+            type="number"
+            class="form-control border-primary"
+            style="margin-top: 5%;"
+            id="todoInput"
+            placeholder="Phone Number"
+            [(ngModel)]="phnNum"
+          />
+          <input
+            type="email"
+            class="form-control border-primary"
+            style="margin-top: 5%;"
+            id="todoInput"
+            placeholder="Email"
+            [(ngModel)]="mail"
+          />
+
+          <button
+            type="button"
+            id="btn"
+            class="btn btn-success  col-12"
+            style="margin-top: 4% ;"
+          (click)="add()">
+           {{btn}}
+          </button>
+        </div>
+        </div>
+      <div class="col"></div>
+
+  <ul>
+    <li *ngFor="let form of forms">
+        <div id="todos" class="border border-success rounded d-flex" style="margin-top: 1%;">
+        </div>
+        <p>Name: {{form.name}}</p>
+        <p>PhoneNumber: {{form.phoneNumber}}</p>
+        <p>Gmail: {{form.email}}</p>
+        <button class="m-1 btn btn-danger btn-sm" (click)="delete(form.id)"> Delete</button>
+        <button class="m-1 btn btn-success btn-sm" (click)="edit(form.id)">Edit</button> 
+    </li>
+  </ul>
+  </div>
+</div>
+</div>
+
+
+
+
