@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './components/form/form.component';
 import { FormService } from './services/form.service';
 import { FormsModule } from '@angular/forms';
+import { IntroComponent } from './components/intro/intro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
